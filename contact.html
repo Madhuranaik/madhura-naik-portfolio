@@ -35,32 +35,62 @@
     </nav>
 
     <main class="container flex-grow-1 d-flex align-items-center justify-content-center my-5 pt-5 pb-4">
-        <div class="row g-4 justify-content-center w-100" style="max-width: 900px;">
+        <div class="row g-4 justify-content-center w-100" style="max-width: 1000px;">
             
-            <!-- Contact Information Card -->
-            <div class="col-lg-8">
-                <div class="bento-card h-100 d-flex flex-column align-items-center text-center p-4 p-md-5">
-                    <img src="static/images/madhura.jpg" alt="Madhura Naik" class="rounded-circle border border-3 border-warning shadow mb-4" style="width: 140px; height: 140px; object-fit: cover;">
-                    <h2 class="text-primary fw-bold mb-3">Get in Touch</h2>
-                    <p class="text-secondary mb-4">Let's discuss how we can work together to achieve your project goals.</p>
+            <!-- Profile Side (Left) -->
+            <div class="col-lg-6 position-relative" style="z-index: 10;">
+                <div class="bento-card h-100 d-flex flex-column justify-content-center position-relative p-4 p-md-5">
+                    <div class="text-center mb-4">
+                        <img src="static/images/madhura.jpg" alt="Madhura Naik" class="rounded-circle border border-3 border-warning shadow-lg" style="width: 160px; height: 160px; object-fit: cover;">
+                    </div>
+                    <h2 class="text-primary fw-bold mb-3 text-center">Get in Touch</h2>
+                    <p class="text-secondary text-center mb-0 fs-5">Let's discuss how we can work together to achieve your project goals.</p>
                     
-                    <div class="d-flex justify-content-center gap-3 flex-wrap">
-                        <a href="mailto:madhuranaik276@gmail.com" class="badge-link text-decoration-none bg-white bg-opacity-10 text-light px-3 py-2 rounded-3 border border-secondary border-opacity-25 hover-primary transition"><i class="fas fa-envelope me-2"></i>Email Me</a>
-                        <a href="https://www.linkedin.com/in/madhura-naik-" target="_blank" class="badge-link text-decoration-none bg-white bg-opacity-10 text-light px-3 py-2 rounded-3 border border-secondary border-opacity-25 hover-primary transition"><i class="fab fa-linkedin me-2"></i>LinkedIn Profile</a>
-                        <span class="badge-link text-decoration-none bg-white bg-opacity-10 text-light px-3 py-2 rounded-3 border border-secondary border-opacity-25"><i class="fas fa-map-marker-alt me-2"></i>Mangalore, India</span>
+                    <!-- Fancy Pointer (Only visible on large screens) -->
+                    <div class="d-none d-lg-block position-absolute" style="right: -45px; top: 50%; transform: translateY(-50%); z-index: 10;">
+                        <i class="fas fa-arrow-right text-primary" style="font-size: 3rem; filter: drop-shadow(0 0 15px rgba(234, 179, 8, 0.6)); animation: bounceRight 2s infinite;"></i>
+                    </div>
+                    
+                    <!-- Fancy Pointer (Visible on small screens, pointing down) -->
+                    <div class="d-lg-none text-center mt-4">
+                        <i class="fas fa-arrow-down text-primary" style="font-size: 2.5rem; filter: drop-shadow(0 0 15px rgba(234, 179, 8, 0.6)); animation: bounceDown 2s infinite;"></i>
                     </div>
                 </div>
             </div>
 
-            <!-- Download Resume Card -->
-            <div class="col-lg-4">
-                <a href="static/docs/Madhura Naik Resume.pdf" download class="bento-card bento-resume h-100 text-decoration-none d-flex flex-column align-items-center justify-content-center p-4 p-md-5 text-center transition">
-                    <i class="fas fa-file-download fs-1 text-primary mb-3 resume-icon transition-transform"></i>
-                    <h3 class="text-light fw-bold mb-2 fs-5">Download Resume</h3>
+            <!-- Contact & Resume Side (Right) -->
+            <div class="col-lg-6 d-flex flex-column gap-4">
+                
+                <!-- Download Resume Card (Half Size) -->
+                <a href="static/docs/Madhura Naik Resume.pdf" download class="bento-card bento-resume flex-fill text-decoration-none d-flex flex-column align-items-center justify-content-center p-4 text-center transition">
+                    <i class="fas fa-file-download fs-2 text-primary mb-2 resume-icon transition-transform"></i>
+                    <h3 class="text-light fw-bold mb-1 fs-5">Download Resume</h3>
                     <p class="text-secondary small mb-0">PDF Version</p>
                 </a>
-            </div>
 
+                <!-- Contact Links Card -->
+                <div class="bento-card flex-fill d-flex flex-column justify-content-center p-4">
+                    <h3 class="text-light fs-5 mb-4 text-center">Connect With Me</h3>
+                    <div class="d-flex flex-column gap-3">
+                        <a href="mailto:madhuranaik276@gmail.com" class="badge-link text-decoration-none bg-white bg-opacity-10 text-light px-4 py-3 rounded-3 border border-secondary border-opacity-25 hover-primary transition d-flex align-items-center justify-content-between">
+                            <span class="fs-6"><i class="fas fa-envelope text-primary me-3 fs-5"></i>Email Me</span>
+                            <i class="fas fa-external-link-alt text-secondary small"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/madhura-naik-" target="_blank" class="badge-link text-decoration-none bg-white bg-opacity-10 text-light px-4 py-3 rounded-3 border border-secondary border-opacity-25 hover-primary transition d-flex align-items-center justify-content-between">
+                            <span class="fs-6"><i class="fab fa-linkedin text-primary me-3 fs-5"></i>LinkedIn</span>
+                            <i class="fas fa-external-link-alt text-secondary small"></i>
+                        </a>
+                        <a href="https://github.com/Madhuranaik/" target="_blank" class="badge-link text-decoration-none bg-white bg-opacity-10 text-light px-4 py-3 rounded-3 border border-secondary border-opacity-25 hover-primary transition d-flex align-items-center justify-content-between">
+                            <span class="fs-6"><i class="fab fa-github text-primary me-3 fs-5"></i>GitHub</span>
+                            <i class="fas fa-external-link-alt text-secondary small"></i>
+                        </a>
+                        <div class="badge-link text-decoration-none bg-white bg-opacity-10 text-light px-4 py-3 rounded-3 border border-secondary border-opacity-25 d-flex align-items-center">
+                            <span class="fs-6"><i class="fas fa-map-marker-alt text-primary me-3 fs-5"></i>Mangalore, India</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </main>
 
